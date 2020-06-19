@@ -4,7 +4,7 @@
 <img src="https://img.shields.io/badge/MagDock-Magento2.3.5%20on%20Docker-yellowgreen" /> 
 <img src="https://img.shields.io/badge/php7.3.18-Magento2.3.5-blue" />
 
-****Install magento2 on docker with just a single command.****
+##### Install magento2 on docker with just a single command.
 
 ## Installation Steps
 #### Prerequisites ####
