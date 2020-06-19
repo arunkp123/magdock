@@ -1,0 +1,13 @@
+version: "2"
+options:
+    verbose: true
+# docker-sync.yml
+syncs:
+    # this name has to be unique and is used in docker-compose.yml as well
+    magento-data-sync: 
+        sync_args: '-L'
+        src: './www/html/magento/'
+        sync_host_ip: 'auto' # localhost for docker for mac
+        sync_host_port: '5000'
+        sync_strategy: 'rsync'
+        notify_terminal: true

@@ -1,0 +1,43 @@
+version: '3.0'
+services:
+  mysql:
+    env_file:
+      - .env
+    image: mysql:5.7
+    container_name: mysql-magento
+    ports:
+      - "3308:3306"
+    networks:
+      - magento-web-network
+  phpmyadmin:
+    env_file:
+      - .env
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    ports:
+      - "8040:80"
+    links:
+      - mysql
+    environment:
+      PMA_HOST: mysql-magento
+    networks:
+      - magento-web-network
+  web:
+    build: ./
+    container_name: magento-web
+    ports:
+      - "8030:80"
+    networks:
+      - magento-web-network
+    env_file:
+      - .env
+    depends_on:
+      - mysql
+    volumes:
+      - magento-data-sync:/var/www/html/magento:nocopy
+volumes:
+  mysql-data:
+  magento-data-sync:
+    external: true
+networks:
+  magento-web-network:
