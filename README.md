@@ -20,7 +20,7 @@ Look for installation guide online for Windows/Linux
 ```sh
 $ git clone https://github.com/arunkp123/magdock.git
 $ cd magdock
-$ make install
+$ sudo make install
 ```
 The complete installation should take 5-10 mins depending on system configuration and internet speed.
 
