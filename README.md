@@ -5,6 +5,7 @@
 <img src="https://img.shields.io/badge/php7.3.18-Magento2.3.5-blue" />
 
 ##### Install magento2 on docker with just a single command.
+###### Tested on MacOS Mojave
 
 ## Installation Steps
 #### Prerequisites ####
